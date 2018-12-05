@@ -13,13 +13,10 @@
   text-rendering: optimizeLegibility; }
 
 html {
-  font-size: 62.5%;
-  background: radial-gradient(ellipse at center, #F7F6F0 0, #c2ba8c 80%, #b0a66b 100%); }
+  font-size: 62.5%; }
 
 body {
-  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
-  color: #444;
-  transition: all .4s .3s ease-in; }
+  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial; }
 
 body, html {
   min-height: 100vh;
@@ -388,6 +385,159 @@ th {
 
 .nav ul {
   list-style: none; }
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 100vh;
+  background: radial-gradient(#4CCEB2, #2F8FD8); }
+
+main {
+  width: 1400px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: center;
+      align-items: center; }
+  main .cards {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    height: 300px;
+    width: 200px;
+    box-shadow: 0 0 10px 0 grey;
+    font-size: 400px;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #F2C14E, #F78154); }
+    main .cards img {
+      width: 100%;
+      height: 50%; }
+
+@keyframes anim1 {
+  0% {
+    transform: translateX(0) scale(0.6);
+    z-index: 2; }
+  20% {
+    transform: translateX(305px) scale(1);
+    z-index: 2; }
+  40% {
+    transform: translateX(610px) scale(1.3);
+    z-index: 2; }
+  60% {
+    transform: translateX(915px) scale(1);
+    z-index: 2; }
+  80% {
+    transform: translateX(1220px) scale(0.6);
+    z-index: 1; }
+  100% {
+    transform: translateX(0) scale(0.6);
+    z-index: 1; } }
+
+@keyframes anim2 {
+  0% {
+    transform: translateX(0) scale(1);
+    z-index: 2; }
+  20% {
+    transform: translateX(305px) scale(1.3);
+    z-index: 2; }
+  40% {
+    transform: translateX(610px) scale(1);
+    z-index: 2; }
+  60% {
+    transform: translateX(915px) scale(0.6);
+    z-index: 1; }
+  80% {
+    transform: translateX(-305px) scale(0.6);
+    z-index: 1; }
+  100% {
+    transform: translateX(0) scale(1);
+    z-index: 1; } }
+
+@keyframes anim3 {
+  0% {
+    transform: translateX(0) scale(1.3);
+    z-index: 2; }
+  20% {
+    transform: translateX(305px) scale(1);
+    z-index: 2; }
+  40% {
+    transform: translateX(610px) scale(0.6);
+    z-index: 1; }
+  60% {
+    transform: translateX(-610px) scale(0.6);
+    z-index: 1; }
+  80% {
+    transform: translateX(-305px) scale(1);
+    z-index: 1; }
+  100% {
+    transform: translateX(0) scale(1.3);
+    z-index: 1; } }
+
+@keyframes anim4 {
+  0% {
+    transform: translateX(0) scale(1);
+    z-index: 2; }
+  20% {
+    transform: translateX(305px) scale(0.6);
+    z-index: 1; }
+  40% {
+    transform: translateX(-915px) scale(0.6);
+    z-index: 1; }
+  60% {
+    transform: translateX(-610px) scale(1);
+    z-index: 1; }
+  80% {
+    transform: translateX(-305px) scale(1.3);
+    z-index: 1; }
+  100% {
+    transform: translateX(0) scale(1);
+    z-index: 1; } }
+
+@keyframes anim5 {
+  0% {
+    transform: translateX(0) scale(0.6);
+    z-index: 1; }
+  20% {
+    transform: translateX(-1220px) scale(0.6);
+    z-index: 1; }
+  40% {
+    transform: translateX(-915px) scale(1);
+    z-index: 1; }
+  60% {
+    transform: translateX(-610px) scale(1.3);
+    z-index: 1; }
+  80% {
+    transform: translateX(-305px) scale(1);
+    z-index: 1; }
+  100% {
+    transform: translateX(0) scale(0.6);
+    z-index: 1; } }
+
+body main .cards_one {
+  animation: anim1 8s infinite 0s linear; }
+
+body main .cards_two {
+  animation: anim2 8s infinite 0s linear; }
+
+body main .cards_three {
+  animation: anim3 8s infinite 0s linear; }
+
+body main .cards_four {
+  animation: anim4 8s infinite 0s linear; }
+
+body main .cards_five {
+  animation: anim5 8s infinite 0s linear; }
+
+.main:hover > .cards {
+  animation-play-state: paused; }
 
 @font-face {
   font-family: 'Font-Name';
